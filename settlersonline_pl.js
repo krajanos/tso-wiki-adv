@@ -1,6 +1,6 @@
 /*
  2020 (c) for Settlersonlinewiki.eu by krajanbdg@gmail.com
- ver. 0.79
+ ver. 0.79+
 */
 var initialData = {
     soldiers: ['Z', 'KZ', 'Re', 'Ry', 'R', 'AZ', 'A', 'KA', 'KU', 'OB', 'Och', 'K', 'WŁ', 'W', 'Ł', 'EŻ', 'Ż', 'PU'],
@@ -20,7 +20,7 @@ var initialData = {
 	generalsImgStyles: 'width: 28px;',
 	columnWithGeneralsTitle: 'garnizon',
 	soldiersImgConfig: [
-	            /* MILITARY - HEAVY */
+		/* MILITARY - HEAVY */
 		{'pattern':  new RegExp('Konny Zbrojny', 'gi'), 'img': 'konnyzbrojny.png'},
 		{'pattern':  new RegExp('Zbrojny', 'gi'), 'img': 'zbrojny.png', searchPattern: new RegExp('[\\d|,] Zbrojny', 'gi')},
 		{'pattern':  new RegExp('Rycerz', 'gi'), 'img': 'rycerz.png'},
@@ -28,7 +28,7 @@ var initialData = {
 		{'pattern':  new RegExp('Arkebuzer w Zbroi', 'gi'), 'img': 'arkebuzerwzbroi.png'},
 		{'pattern':  new RegExp('Arkebuzer', 'gi'), 'img': 'arkebuzer.png', searchPattern: new RegExp('[\\d|,] Arkebuzer', 'gi')},
 		{'pattern':  new RegExp('Oblężnik', 'gi'), 'img': 'obleznik.png'},
-                /* SPECIAL ATTACKS */
+		/* SPECIAL ATTACKS */
 		{'pattern':  new RegExp('Strzała Czarnodrzewia', 'gi'), 'img': 'czarnastrzala.png'},
 		{'pattern':  new RegExp('Strzały Pokryte Czekoladą', 'gi'), 'img': 'czekoladowastrzala.png'},
 		{'pattern':  new RegExp('Grad Strzał', 'gi'), 'img': 'grad.png'},
@@ -39,7 +39,7 @@ var initialData = {
 		{'pattern':  new RegExp('Duża Katapulta', 'gi'), 'img': 'duzakatapulta.png'},
 		{'pattern':  new RegExp('Wsparcie Dystansowe', 'gi'), 'img': 'wsparcie.png'},
 		{'pattern':  new RegExp('Mikstura Słabego Punktu', 'gi'), 'img': 'mikstura.png'},
-                /* GENERALS */
+		/* GENERALS */
 		{'pattern':  new RegExp('\\(200\\)', 'gi'), 'img': 'ngeneral.png', 'kind': 'general'},
 		{'pattern':  new RegExp('\\(GEN\\)', 'gi'), 'img': 'ngeneral.png', 'kind': 'general'},
 		{'pattern':  new RegExp('\\(250\\)', 'gi'), 'img': 'nweteran.png', 'kind': 'general'},
@@ -67,7 +67,7 @@ var initialData = {
 		{'pattern':  new RegExp('\\(DUCH\\)', 'gi'), 'img': 'nduch.png', 'kind': 'general'},
 		{'pattern':  new RegExp('\\(MRÓZ\\)', 'gi'), 'img': 'nmrozny.png', 'kind': 'general'},
 		{'pattern':  new RegExp('\\(SAM\\)', 'gi'), 'img': 'nsamotnik.png', 'kind': 'general'},
-                /* ENEMY - BASIC */
+		/* ENEMY - BASIC */
 		{'pattern':  new RegExp('Drobny Kłusownik', 'gi'), 'img': 'lotrzyk.png'},
 		{'pattern':  new RegExp('Łotrzyk', 'gi'), 'img': 'lotrzyk.png'},
 		{'pattern':  new RegExp('Łotr', 'gi'), 'img': 'lotr.png', searchPattern: new RegExp('[\\d|,] Łotr', 'gi')},
@@ -179,7 +179,7 @@ var initialData = {
 		{'pattern':  new RegExp('Denis Łobuziak', 'gi'), 'img': 'denis.png'},
 		{'pattern':  new RegExp('Aleks Zadymiarz', 'gi'), 'img': 'aleks.png'},
 		{'pattern':  new RegExp('Bob Szubrawiec', 'gi'), 'img': 'bob.png'},
-                /* ENEMY - ELITE */
+		/* ENEMY - ELITE */
 		{'pattern':  new RegExp('Zwadźca', 'gi'), 'img': 'zwadzca.png'},
 		{'pattern':  new RegExp('Szermierz', 'gi'), 'img': 'szermierz.png'},
 		{'pattern':  new RegExp('Mistrz Miecza', 'gi'), 'img': 'mistrzmiecza.png'},
@@ -262,7 +262,7 @@ var initialData = {
 		{'pattern':  new RegExp('Risi', 'gi'), 'img': 'risi.png'},
 		{'pattern':  new RegExp('Chuck', 'gi'), 'img': 'chuck.png'},
 		{'pattern':  new RegExp('Kolce', 'gi'), 'img': 'kolce.png'},
-                /* MILITARY - BASIC */
+		/* MILITARY - BASIC */
 		{'pattern':  new RegExp('Rekrut', 'gi'), 'img': 'rekrut.png', searchPattern: new RegExp('[\\d|,] Rekrut', 'gi')},
 		{'pattern':  new RegExp('Ochotnik', 'gi'), 'img': 'ochotnik.png', searchPattern: new RegExp('[\\d|,] Ochotnik', 'gi')},
 		{'pattern':  new RegExp('Elitarny Żołnierz', 'gi'), 'img': 'elitarny.png', searchPattern: new RegExp('[\\d|,] Elitarny Żołnierz', 'gi')},
@@ -272,7 +272,7 @@ var initialData = {
 		{'pattern':  new RegExp('Kusznik', 'gi'), 'img': 'kusznik.png', searchPattern: new RegExp('[\\d|,] Kusznik', 'gi')},
 		{'pattern':  new RegExp('Konny', 'gi'), 'img': 'konny.png', searchPattern: new RegExp('[\\d|,] Konny', 'gi')},
 		{'pattern':  new RegExp('Puszkarz', 'gi'), 'img': 'puszkarz.png', searchPattern: new RegExp('[\\d|,] Puszkarz', 'gi')},
-                /* ENEMY - BONABERTI */
+		/* ENEMY - BONABERTI */
 		{'pattern':  new RegExp('Blond Łucznik', 'gi'), 'img': 'blondlucznik.png'},
 		{'pattern':  new RegExp('Górnik Obrońca', 'gi'), 'img': 'gornikobronny.png'},
 		{'pattern':  new RegExp('Lekkomyślny Jeździec', 'gi'), 'img': 'lekkomyslnyjezdziec.png'},
@@ -283,84 +283,87 @@ var initialData = {
 	]
 };
 
-function prepare_summary(total_losses, alternative_losses) {
+function prepareSummary(totalLosses, alternativeLosses) {
 	"use strict";
-	var summ = [];
+	var summary = [];
 	for (var y = 0; y < initialData.soldiers.length; y++){
-		if (total_losses[initialData.soldiers[y]] > 0){
-			summ.push(total_losses[initialData.soldiers[y]] + initialData.soldiers[y]);
+		if (totalLosses[initialData.soldiers[y]] > 0){
+			summary.push(totalLosses[initialData.soldiers[y]] + initialData.soldiers[y]);
 		}
 	}
-	if (alternative_losses.length > 0){
-		var alternative_summ = [],
-			alternative_text = [],
+	if (alternativeLosses.length > 0){
+		var alternativeSum = [],
+			alternativeText = [],
 			temp = [],
 			temp2 = [];
-		for(var n = 0; n < alternative_losses.length; n++){
-			for(var m = 0; m < alternative_losses[n].length; m++){
+		for(var n = 0; n < alternativeLosses.length; n++){
+			for(var m = 0; m < alternativeLosses[n].length; m++){
 				for (var t = 0; t < initialData.soldiers.length; t++){
-					if (alternative_losses[n][m][initialData.soldiers[t]] > 0){
-						alternative_summ.push(alternative_losses[n][m][initialData.soldiers[t]] + initialData.soldiers[t]);
+					if (alternativeLosses[n][m][initialData.soldiers[t]] > 0){
+						alternativeSum.push(alternativeLosses[n][m][initialData.soldiers[t]] + initialData.soldiers[t]);
 					}
 				}
-				if (m < alternative_losses[n].length - 1){
-					temp.push(alternative_summ.join(', ') + ' ' + initialData.alternativeText + ' ');
+				if (m < alternativeLosses[n].length - 1){
+					temp.push(alternativeSum.join(', ') + ' ' + initialData.alternativeText + ' ');
 				} else {
-					temp.push(alternative_summ.join(', '));
+					temp.push(alternativeSum.join(', '));
 				}
-				alternative_summ = [];
+				alternativeSum = [];
 			}
 			temp2.push(temp.join(''));
 			temp = [];
 		}
-		alternative_text += temp2.join(' <br/> ');
+		alternativeText += temp2.join(' <br/> ');
 	}
-	if (summ.length > 0){
-		if (alternative_losses.length > 0){
-			return initialData.lossesOfSelectedAttacksText + summ.join(', ') + initialData.alternativeAttacksListHeader + alternative_text;
+	if(summary.length > 0) {
+		if (alternativeLosses.length > 0){
+			return initialData.lossesOfSelectedAttacksText + summary.join(', ') + initialData.alternativeAttacksListHeader + alternativeText;
 		}
-		return initialData.lossesOfSelectedAttacksText + summ.join(', ');
-	} else if (alternative_losses.length > 0){
-		return initialData.alternativeAttacksText + alternative_text;
+		return initialData.lossesOfSelectedAttacksText + summary.join(', ');
+	} else if (alternativeLosses.length > 0){
+		return initialData.alternativeAttacksText + alternativeText;
 	}
 	return initialData.noLossestext;
 }
 
-function recognise_possible_attacks(losses_list, alternative_losses){
+function recognisePossibleAttacks(lossesList, alternativeLosses){
 	"use strict";
-	var alternatives = new Array(losses_list.length),
+	var alternatives = new Array(lossesList.length),
 		count;
-	for (var x = 0; x < losses_list.length; x++){
+	for (var x = 0; x < lossesList.length; x++){
 		alternatives[x] = jQuery.extend({}, initialData.templateEmptyLossesDict);
 		for (var y = 0; y < initialData.soldiers.length; y++){
-			count = losses_list[x].match("([\\d]+\\s*"+initialData.soldiers[y]+")");
+			count = lossesList[x].match("([\\d]+\\s*"+initialData.soldiers[y]+")");
 			while(count != null){
 				alternatives[x][initialData.soldiers[y]] += parseInt(count[0].replace(initialData.soldiers[y]));
-				losses_list[x] = losses_list[x].replace(count[0]);
-				count = losses_list[x].match("([\\d]+\\s*"+initialData.soldiers[y]+")");
+				lossesList[x] = lossesList[x].replace(count[0]);
+				count = lossesList[x].match("([\\d]+\\s*"+initialData.soldiers[y]+")");
 			}
 		}
 	}
-	alternative_losses.push(alternatives);
+	alternativeLosses.push(alternatives);
 }
 
-function recalculate_summary(jTable){
+function recalculateSummary(jTable){
 	"use strict";
 	jTable.next('div.summarydiv').text('');
-	var alternative_losses = [],
-		total_losses = jQuery.extend({}, initialData.templateEmptyLossesDict),
+	var alternativeLosses = [],
+		totalLosses = jQuery.extend({}, initialData.templateEmptyLossesDict),
 		count, losses, jThisText;
 	jTable.find('tr:not(:first,.afterattack,.top_row)').find('td:last').each(function (){
 		jThisText = jQuery(this).text();
 		if (jThisText.indexOf(initialData.alternativeText) !== -1){
 			if (jThisText.split('[').length > 2){
-				var possible_versions = jThisText.split(initialData.alternativeText);
-				recognise_possible_attacks([possible_versions[0].split('[')[1].replace(']',''), possible_versions[1].split('[')[1].replace(']','')], alternative_losses);
+				var possibleVersions = jThisText.split(initialData.alternativeText);
+				recognisePossibleAttacks(
+					[possibleVersions[0].split('[')[1].replace(']',''), possibleVersions[1].split('[')[1].replace(']','')],
+					alternativeLosses
+				);
 				// [] lub []
-			}else{
+			} else {
 				// [x lub y, z]
 				losses = jThisText.split('[')[1].replace(']','').split(initialData.alternativeText);
-				recognise_possible_attacks([losses[0], losses[1]], alternative_losses);
+				recognisePossibleAttacks([losses[0], losses[1]], alternativeLosses);
 			}
 		} else {
 			if (jThisText.indexOf('[') !== -1){
@@ -368,7 +371,7 @@ function recalculate_summary(jTable){
 				for (var y = 0; y < initialData.soldiers.length; y++){
 					count = losses.match("([\\d]+\\s*"+initialData.soldiers[y]+")");
 					while(count != null){
-						total_losses[initialData.soldiers[y]] += parseInt(count[0].replace(initialData.soldiers[y]));
+						totalLosses[initialData.soldiers[y]] += parseInt(count[0].replace(initialData.soldiers[y]));
 						losses = losses.replace(count[0]);
 						count = losses.match("([\\d]+\\s*"+initialData.soldiers[y]+")");
 					}
@@ -376,49 +379,49 @@ function recalculate_summary(jTable){
 			}
 		}
 	});
-	jTable.next('div.summarydiv').html(prepare_summary(total_losses, alternative_losses));
+	jTable.next('div.summarydiv').html(prepareSummary(totalLosses, alternativeLosses));
 }
 
-function show_selected_attack(event, attackNumber) {
+function showSelectedAttack(event, attackNumber) {
 	"use strict";
-	var table = jQuery(event).parents('table');
-	table.find('tr.afterattack').each(function (){
-		if (jQuery(this).find('td:eq(1)').text() == attackNumber){
+	var currentTable = jQuery(event).parents('table');
+	currentTable.find('tr.afterattack').each(function (){
+		if (jQuery(this).find('td:eq(1)').text() === attackNumber){
 			jQuery(this).addClass('donthideme').show();
 		}
 	});
-	create_top_row(table.find('tr:first'));
+	createTopRow(currentTable.find('tr:first'));
 }
 
-function show_general_attacks(event, general){
+function showGeneralAttacks(event, general){
 	"use strict";
-	var table = jQuery(event).parents('table');
-	table.find('tr.afterattack').each(function (){
-		if (jQuery(this).find('td:first').text() == general){
+	var currentTable = jQuery(event).parents('table');
+	currentTable.find('tr.afterattack').each(function (){
+		if (jQuery(this).find('td:first').text() === general){
 			jQuery(this).addClass('donthideme').show();
 		}
 	});
-	create_top_row(table.find('tr:first'));
+	createTopRow(currentTable.find('tr:first'));
 }
 
-function toggle_attacks(event){
+function toggleAttacks(event){
 	"use strict";
-	var table = jQuery(event).parents('table');
+	var currentTable = jQuery(event).parents('table');
 	initialData.hideAttacksOption = !initialData.hideAttacksOption;
 	if (initialData.hideAttacksOption){
 		//ukrywanie
-		table.find('tr.afterattack').hide('fast');
+		currentTable.find('tr.afterattack').hide('fast');
 	} else{
-		table.find('tr.afterattack').removeClass('donthideme').show('fast');
+		currentTable.find('tr.afterattack').removeClass('donthideme').show('fast');
 	}
-	create_top_row(table.find('tr:first'));
+	createTopRow(currentTable.find('tr:first'));
 }
 
-function toggle_icons(event, table) {
+function toggleIcons(event, table) {
 	"use strict";
 	var jTable = table || jQuery(event).parents('table'),
 		tdElems = jTable.find('tr:not(:first):not(.top_row) > td:nth-child(3), tr:not(:first):not(.top_row) > td:nth-child(4)'),
-		jTd, tdHtml, soldierImgTpl, generalImgTpl, reExec, imgGeneratorFn, soldierImg, reExecResult;
+		jTd, tdHtml, soldierImgTpl, generalImgTpl, reExec, imgGeneratorFn, soldierImg;
 	if (event) {
 		initialData.showIconsOfSoldiers = !initialData.showIconsOfSoldiers;
 		jTable.find('input[name="icons_toggler"]').prop('checked', initialData.showIconsOfSoldiers);
@@ -433,26 +436,25 @@ function toggle_icons(event, table) {
 			jTd = jQuery(td);
 			tdHtml = jTd.html();
 			initialData.soldiersImgConfig.forEach(function(imgConfig) {
-        if (imgConfig.searchPattern) {
-					reExec = tdHtml.match(imgConfig.searchPattern);
-					if (!reExec) {
-						return;
-					}
-					soldierImg = imgGeneratorFn(imgConfig);
-
-                    reExec.forEach(function(reExecResult) {
-						tdHtml = tdHtml.replace(
-							reExecResult,
-							reExecResult.replace(imgConfig.pattern, '') + soldierImg
-						);
-					})
+			if (imgConfig.searchPattern) {
+				reExec = tdHtml.match(imgConfig.searchPattern);
+				if (!reExec) {
 					return;
-				} else if (imgConfig.pattern.test(tdHtml)) {
-					tdHtml = tdHtml.replace(
-						imgConfig.pattern,
-						imgGeneratorFn(imgConfig)
-					);
 				}
+				soldierImg = imgGeneratorFn(imgConfig);
+				reExec.forEach(function(reExecResult) {
+					tdHtml = tdHtml.replace(
+						reExecResult,
+						reExecResult.replace(imgConfig.pattern, '') + soldierImg
+					);
+				})
+				return;
+			} else if (imgConfig.pattern.test(tdHtml)) {
+				tdHtml = tdHtml.replace(
+					imgConfig.pattern,
+					imgGeneratorFn(imgConfig)
+				);
+			}
 			});
 			jTd.html(tdHtml);
 		});
@@ -465,42 +467,40 @@ function toggle_icons(event, table) {
 	}
 }
 
-
-function create_top_row(clicked_row){
+function createTopRow(clicked_row){
 	"use strict";
 	var table = jQuery(clicked_row).parents('table'),
-		old_attacks = table.find('tr.afterattack:not(.donthideme)'),
-		hideLinkTpl = '<div style="float: right;"><div onClick="toggle_icons(this, undefined)" style="cursor: pointer; float: left; margin-right: 30px;"><input name="icons_toggler" type="checkbox"'+ (initialData.showIconsOfSoldiers ? ' checked="checked"' : "") + '"> ' + initialData.showIconsOfSoldiersLinkText + '</div><div onClick="toggle_attacks(this)" style="cursor: pointer; float: right;"><input type="checkbox"'+ (initialData.hideAttacksOption ? ' checked="checked"' : "") +'"> ' + initialData.hideAttacksOptionLinkText + '</div></div>';
+		oldAttacks = table.find('tr.afterattack:not(.donthideme)'),
+		hideLinkTpl = '<div style="float: right;"><div onClick="toggleIcons(this, undefined)" style="cursor: pointer; float: left; margin-right: 30px;"><input name="icons_toggler" type="checkbox"'+ (initialData.showIconsOfSoldiers ? ' checked="checked"' : "") + '"> ' + initialData.showIconsOfSoldiersLinkText + '</div><div onClick="toggleAttacks(this)" style="cursor: pointer; float: right;"><input type="checkbox"'+ (initialData.hideAttacksOption ? ' checked="checked"' : "") +'"> ' + initialData.hideAttacksOptionLinkText + '</div></div>';
 	if (table.find('tr.top_row').length === 0) {//pierwsze klikniecie
 		table.find('tr:first').after('<tr class="top_row"><td colspan="4" style="background-color: gainsboro;"></td></tr>');
 	}
-	var is_selected = initialData.hideAttacksOption ? ' checked="checked"' : "";
-	if (old_attacks.length > 0 && initialData.hideAttacksOption) {
-		var last_attacker = null,
-			output_html = '<span style="float: left;">',
+	if (oldAttacks.length > 0 && initialData.hideAttacksOption) {
+		var lastAttacker = null,
+			outputHtml = '<span style="float: left;">',
 			tdElems, general, camp;
-		old_attacks.each(function(){
+		oldAttacks.each(function(){
 			tdElems = jQuery(this).find('td');
 			general = jQuery(tdElems[0]).text();
 			camp = jQuery(tdElems[1]).text();
-			if (last_attacker == null) {
-				last_attacker = general;
-				output_html += '<b onClick="show_general_attacks(this, \'' + general + '\')" style="cursor: pointer;">' + general + '</b>' + ' (';
+			if (lastAttacker == null) {
+				lastAttacker = general;
+				outputHtml += '<b onClick="showGeneralAttacks(this, \'' + general + '\')" style="cursor: pointer;">' + general + '</b>' + ' (';
 			}
-			if (last_attacker == general) {
-				output_html += '<span onClick="show_selected_attack(this, \'' + camp + '\')" style="cursor: pointer;">' + camp + '</span> ';
+			if (lastAttacker === general) {
+				outputHtml += '<span onClick="showSelectedAttack(this, \'' + camp + '\')" style="cursor: pointer;">' + camp + '</span> ';
 			} else {
-				output_html = output_html.trim();
-				output_html += ') <b onClick="show_general_attacks(this, \'' + general + '\')" style="cursor: pointer;">' + general + '</b> (<span onClick="show_selected_attack(this, \'' + camp + '\')" style="cursor: pointer;">' + camp + '<span> ';
-				last_attacker = general;
+				outputHtml = outputHtml.trim();
+				outputHtml += ') <b onClick="showGeneralAttacks(this, \'' + general + '\')" style="cursor: pointer;">' + general + '</b> (<span onClick="showSelectedAttack(this, \'' + camp + '\')" style="cursor: pointer;">' + camp + '<span> ';
+				lastAttacker = general;
 			}
 		});
-		if (last_attacker != null) {
-			output_html = output_html.trim();
-			output_html += ')';
+		if (lastAttacker != null) {
+			outputHtml = outputHtml.trim();
+			outputHtml += ')';
 		}
-		output_html += '</span>';
-		table.find('tr.top_row').show('slow').find('td').html('<div style="float: left;"><span>' + initialData.hiddenAttacksText + ':</span><br/>' + output_html + '</div>' + hideLinkTpl);
+		outputHtml += '</span>';
+		table.find('tr.top_row').show('slow').find('td').html('<div style="float: left;"><span>' + initialData.hiddenAttacksText + ':</span><br/>' + outputHtml + '</div>' + hideLinkTpl);
 	} else { //brak atakow
 		table.find('tr.top_row td').html(hideLinkTpl);
 	}
@@ -508,23 +508,23 @@ function create_top_row(clicked_row){
 
 jQuery(document).ready(function() {
 	"use strict";
-    var losses_dict = {},
-		row_color, row_text_decoration, jTable, jRow;
+    var lossesDict = {},
+		rowColor, rowTextDecoration, jTable, jRow, jThis;
     initialData.soldiers.forEach(function (soldier){
-        losses_dict[soldier] = 0;
+        lossesDict[soldier] = 0;
     });
-    initialData.templateEmptyLossesDict = losses_dict;
+    initialData.templateEmptyLossesDict = lossesDict;
 
 	jQuery('table').each(function (_, table){
 		jTable = jQuery(table);
 		if(jTable.find('tr:first td:first').text().toLowerCase() === initialData.columnWithGeneralsTitle){
 			jTable.after('<div class="summarydiv"></div>');
-			recalculate_summary(jTable);
+			recalculateSummary(jTable);
 			jRow = jTable.find('tr:not(:first):eq(1) td');
-			row_color = jRow.css('background-color');
-			row_text_decoration = jRow.css('text-decoration');
+			rowColor = jRow.css('background-color');
+			rowTextDecoration = jRow.css('text-decoration');
 			jTable.find('tr:not(:first)').css('cursor', 'pointer').click(function(){
-				var jThis = jQuery(this);
+				jThis = jQuery(this);
 				if (!jThis.hasClass('afterattack')){
 					jThis.addClass('afterattack');
 					jThis.find('td').css({
@@ -537,17 +537,17 @@ jQuery(document).ready(function() {
 				} else {
 					jThis.removeClass('afterattack').removeClass('donthideme');
 					jThis.find('td').css({
-						'text-decoration': row_text_decoration,
-						'background-color': row_color
+						'text-decoration': rowTextDecoration,
+						'background-color': rowColor
 					});
 				}
-				recalculate_summary(jQuery(jThis.parents('table')));
+				recalculateSummary(jQuery(jThis.parents('table')));
 				if (initialData.hideAttacksOption){
-					create_top_row(this);
+					createTopRow(this);
 				}
 			});
-			create_top_row(jTable.find('tr:last')); /* dodanie pierwszego wiersza */
-			toggle_icons(undefined, jTable);
+			createTopRow(jTable.find('tr:last')); /* dodanie pierwszego wiersza */
+			toggleIcons(undefined, jTable);
 		}
 	});
 });
