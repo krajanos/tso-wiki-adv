@@ -1,17 +1,21 @@
 /*
- 2020 (c) for Settlersonlinewiki.eu by krajanbdg@gmail.com
- ver. 0.79+
+ 2021 (c) for Settlersonlinewiki.eu by krajanbdg@gmail.com
+ ver. 1.0
 */
+
+// TODO ? CZY ZMIENIAC WARTOSC W initialData
 var initialData = {
     soldiers: ['Z', 'KZ', 'Re', 'Ry', 'R', 'AZ', 'A', 'KA', 'KU', 'OB', 'Och', 'K', 'WŁ', 'W', 'Ł', 'EŻ', 'Ż', 'PU'],
     hideAttacksOption: true,
     hideAttacksOptionLinkText: 'Ukrywaj ataki',
     showIconsOfSoldiers: true,
     showIconsOfSoldiersLinkText: 'Wersja obrazkowa',
+    hidePreviousAttacks: true,
+    hidePreviousAttacksLinkText: 'Ukrywaj poprzednie ataki',
     lossesOfSelectedAttacksText: 'Straty z zaznaczonych ataków: ',
     alternativeAttacksListHeader: ' + alternatywne ataki: <br/>',
     alternativeAttacksText: 'Straty z alternatywnych ataków:<br/>',
-    noLossestext: 'Brak strat z zaznaczonych ataków.',
+    noLossesText: 'Brak strat z zaznaczonych ataków.',
     hiddenAttacksText: 'Ukryte ataki',
     alternativeText: 'lub',
     soldiersImgPath: 'http://settlersonlinewiki.eu/unit/',
@@ -67,6 +71,7 @@ var initialData = {
         {'pattern':  new RegExp('\\(DUCH\\)', 'gi'), 'img': 'nduch.png', 'kind': 'general'},
         {'pattern':  new RegExp('\\(MRÓZ\\)', 'gi'), 'img': 'nmrozny.png', 'kind': 'general'},
         {'pattern':  new RegExp('\\(SAM\\)', 'gi'), 'img': 'nsamotnik.png', 'kind': 'general'},
+		{'pattern':  new RegExp('\\(KRZ\\)', 'gi'), 'img': 'nkrzykliwa.png', 'kind': 'general'},
         /* ENEMY - BASIC */
         {'pattern':  new RegExp('Drobny Kłusownik', 'gi'), 'img': 'lotrzyk.png'},
         {'pattern':  new RegExp('Łotrzyk', 'gi'), 'img': 'lotrzyk.png'},
@@ -323,7 +328,7 @@ function prepareSummary(totalLosses, alternativeLosses) {
     } else if (alternativeLosses.length > 0){
         return initialData.alternativeAttacksText + alternativeText;
     }
-    return initialData.noLossestext;
+    return initialData.noLossesText;
 }
 
 function recognisePossibleAttacks(lossesList, alternativeLosses){
@@ -467,14 +472,53 @@ function toggleIcons(event, table) {
     }
 }
 
+function getTopRowActionLink(eventName, eventParams, extraStyle, inputName, inputValue, linkText) {
+    return [
+        '<div onClick="' + eventName +'(' + eventParams + ')" style="cursor: pointer; float: left;' + extraStyle + '">',
+        '<input name="' + inputName + '" type="checkbox"'+ (inputValue ? ' checked="checked"' : "") + '"> ',
+        linkText,
+        '</div>'
+    ].join('');
+}
+
+function getTopRowActionLinks() {
+    return [
+        getTopRowActionLink(
+            'toggleIcons',
+            'this, undefined',
+            'margin-right: 30px;',
+            'icons_toggler',
+            initialData.showIconsOfSoldiers,
+            initialData.showIconsOfSoldiersLinkText
+        ),
+        getTopRowActionLink(
+            'toggleAttacks',
+            'this',
+            'margin-right: 30px;',
+            'attack_toggler',
+            initialData.hideAttacksOption,
+            initialData.hideAttacksOptionLinkText
+        ),
+        getTopRowActionLink(
+            'togglePreviousAttacks',
+            'this',
+            '',
+            'previous_attack_toggler',
+            initialData.hidePreviousAttacks,
+            initialData.hidePreviousAttacksLinkText
+        ),
+    ].join('');
+}
+
 function createTopRow(clicked_row){
     "use strict";
     var table = jQuery(clicked_row).parents('table'),
         oldAttacks = table.find('tr.afterattack:not(.donthideme)'),
-        hideLinkTpl = '<div style="float: right;"><div onClick="toggleIcons(this, undefined)" style="cursor: pointer; float: left; margin-right: 30px;"><input name="icons_toggler" type="checkbox"'+ (initialData.showIconsOfSoldiers ? ' checked="checked"' : "") + '"> ' + initialData.showIconsOfSoldiersLinkText + '</div><div onClick="toggleAttacks(this)" style="cursor: pointer; float: right;"><input type="checkbox"'+ (initialData.hideAttacksOption ? ' checked="checked"' : "") +'"> ' + initialData.hideAttacksOptionLinkText + '</div></div>';
+        hideLinkTpl = '<div style="float: right;">' + getTopRowActionLinks() + '</div>';
     if (table.find('tr.top_row').length === 0) {//pierwsze klikniecie
         table.find('tr:first').after('<tr class="top_row"><td colspan="4" style="background-color: gainsboro;"></td></tr>');
     }
+
     if (oldAttacks.length > 0 && initialData.hideAttacksOption) {
         var lastAttacker = null,
             outputHtml = '<span style="float: left;">',
@@ -532,6 +576,17 @@ jQuery(document).ready(function() {
                         'background-color': 'silver'
                     });
                     if (initialData.hideAttacksOption){
+                        if (initialData.hidePreviousAttacks) {
+                            jThis.prevUntil('tr.top_row').each(function (_, attackAbove){
+                                attackAbove = jQuery(attackAbove);
+                                attackAbove.addClass('afterattack');
+                                attackAbove.find('td').css({
+                                    'text-decoration': 'line-through',
+                                    'background-color': 'silver'
+                                });
+                                attackAbove.hide('fast');
+                            });
+                        }
                         jThis.hide('fast');
                     }
                 } else {
