@@ -539,7 +539,6 @@
         return [
             getTopRowActionLink(
                 'icons-toggler',
-                //'this, undefined',
                 'margin-right: 30px;',
                 'icons_toggler',
                 getConfigValue('showIconsOfSoldiers'),
@@ -547,7 +546,6 @@
             ),
             getTopRowActionLink(
                 'attacks-toggler',
-                //'this',
                 'margin-right: 30px;',
                 'attack_toggler',
                 getConfigValue('hideAttacksOption'),
@@ -555,7 +553,6 @@
             ),
             getTopRowActionLink(
                 'previous-attacks-toggler',
-                //'this',
                 '',
                 'previous_attack_toggler',
                 getConfigValue('hidePreviousAttacks'),
@@ -575,7 +572,6 @@
 
         if (oldAttacks.length > 0 && getConfigValue('hideAttacksOption')) {
             var lastAttacker = null,
-                //outputHtml = '<span style="float: left;">',
                 outputHtml = jQuery('<span>', {
                     'style': 'float: left;'
                 }),
@@ -591,7 +587,6 @@
                         'style': 'cursor: pointer;'
                     }).text(general));
                     outputHtml.append(jQuery('<span/>').text(' ('));
-                    //outputHtml += '<b onClick="showGeneralAttacks(this, \'' + general + '\')" style="cursor: pointer;">' + general + '</b>' + ' (';
                 }
                 if (lastAttacker === general) {
                     outputHtml.append(jQuery('<span/>', {
@@ -599,9 +594,7 @@
                         'style': 'cursor: pointer;'
                     }).text(camp));
                     outputHtml.append(jQuery('<span/>').text(' '));
-                    //outputHtml += '<span onClick="showSelectedAttack(this, \'' + camp + '\')" style="cursor: pointer;">' + camp + '</span> ';
                 } else {
-                    //outputHtml = outputHtml.trim();
                     outputHtml.find('span').last().text(outputHtml.find('span').last().text().trim());
                     outputHtml.append(jQuery('<span/>').text(') '));
                     outputHtml.append(jQuery('<b>', {
@@ -614,16 +607,12 @@
                         'style': 'cursor: pointer;'
                     }).text(camp));
                     outputHtml.append(jQuery('<span/>').text(' '));
-                    //outputHtml += ') <b onClick="showGeneralAttacks(this, \'' + general + '\')" style="cursor: pointer;">' + general + '</b> (<span onClick="showSelectedAttack(this, \'' + camp + '\')" style="cursor: pointer;">' + camp + '<span> ';
                     lastAttacker = general;
                 }
             });
             if (lastAttacker != null) {
-                //outputHtml = outputHtml.trim();
                 outputHtml.find('span').last().text(outputHtml.find('span').last().text().trim() + ')');
-                //outputHtml += ')';
             }
-            //outputHtml += '</span>';
             table.find('tr.top_row').show('slow').find('td').html('<div style="float: left;"><span>' + initialData.hiddenAttacksText + ':</span><br/>' + outputHtml.html() + '</div>' + hideLinkTpl);
         } else { //brak atakow
             table.find('tr.top_row td').html(hideLinkTpl);
