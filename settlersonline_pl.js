@@ -1,7 +1,7 @@
 /*
  2021 (c) for Settlersonlinewiki.eu by krajanbdg@gmail.com
  https://github.com/krajanos/tso-wiki-adv
- ver. 1.0
+ ver. 1.01 PL
 */
 
 (function() {
@@ -76,6 +76,7 @@
             {'pattern':  new RegExp('\\(MRÓZ\\)', 'gi'), 'img': 'nmrozny.png', 'kind': 'general'},
             {'pattern':  new RegExp('\\(SAM\\)', 'gi'), 'img': 'nsamotnik.png', 'kind': 'general'},
             {'pattern':  new RegExp('\\(KRZ\\)', 'gi'), 'img': 'nkrzykliwa.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(DDO\\)', 'gi'), 'img': 'ndziadek.png', 'kind': 'general'},
             /* ENEMY - BASIC */
             {'pattern':  new RegExp('Drobny Kłusownik', 'gi'), 'img': 'lotrzyk.png'},
             {'pattern':  new RegExp('Łotrzyk', 'gi'), 'img': 'lotrzyk.png'},
