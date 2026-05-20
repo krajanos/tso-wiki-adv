@@ -1,7 +1,7 @@
 /*
  2021 (c) for Settlersonlinewiki.eu by krajanbdg@gmail.com
  https://github.com/krajanos/tso-wiki-adv
- ver. 1.01 PL
+ ver. 1.7 PL
 */
 
 (function() {
@@ -22,9 +22,9 @@
         noLossesText: 'Brak strat z zaznaczonych ataków.',
         hiddenAttacksText: 'Ukryte ataki',
         alternativeText: 'lub',
-        soldiersImgPath: 'http://settlersonlinewiki.eu/unit/',
+        soldiersImgPath: 'https://settlersonlinewiki.eu/unit/',
         soldiersImgStyles: 'width: 24px;',
-        generalsImgPath: 'http://settlersonlinewiki.eu/unit/',
+        generalsImgPath: 'https://settlersonlinewiki.eu/unit/',
         generalsImgStyles: 'width: 28px;',
         columnWithGeneralsTitle: 'garnizon',
         soldiersImgConfig: [
@@ -38,7 +38,9 @@
             {'pattern':  new RegExp('Oblężnik', 'gi'), 'img': 'obleznik.png'},
             /* SPECIAL ATTACKS */
             {'pattern':  new RegExp('Strzała Czarnodrzewia', 'gi'), 'img': 'czarnastrzala.png'},
+            {'pattern':  new RegExp('Strzała Kupidyna', 'gi'), 'img': 'kupidyna.png'},
             {'pattern':  new RegExp('Strzały Pokryte Czekoladą', 'gi'), 'img': 'czekoladowastrzala.png'},
+            {'pattern':  new RegExp('Grad Lekkich Strzał', 'gi'), 'img': 'strzalazgalezi.png'},
             {'pattern':  new RegExp('Grad Strzał', 'gi'), 'img': 'grad.png'},
             {'pattern':  new RegExp('Grad Płonących Strzał', 'gi'), 'img': 'ognistastrzala.png'},
             {'pattern':  new RegExp('Skrytobójca', 'gi'), 'img': 'asason.png'},
@@ -77,6 +79,11 @@
             {'pattern':  new RegExp('\\(SAM\\)', 'gi'), 'img': 'nsamotnik.png', 'kind': 'general'},
             {'pattern':  new RegExp('\\(KRZ\\)', 'gi'), 'img': 'nkrzykliwa.png', 'kind': 'general'},
             {'pattern':  new RegExp('\\(DDO\\)', 'gi'), 'img': 'ndziadek.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(CUD\\)', 'gi'), 'img': 'ncudowna.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(STAN\\)', 'gi'), 'img': 'nstanowczy.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(JUAN\\)', 'gi'), 'img': 'njuan.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(BROH\\)', 'gi'), 'img': 'nbrohmann.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(NAR\\)', 'gi'), 'img': 'nnarcystyczny.png', 'kind': 'general'},
             /* ENEMY - BASIC */
             {'pattern':  new RegExp('Drobny Kłusownik', 'gi'), 'img': 'lotrzyk.png'},
             {'pattern':  new RegExp('Łotrzyk', 'gi'), 'img': 'lotrzyk.png'},
