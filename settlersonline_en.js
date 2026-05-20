@@ -1,7 +1,7 @@
 /*
  2021 (c) for Settlersonlinewiki.eu by krajanbdg@gmail.com
  https://github.com/krajanos/tso-wiki-adv
- ver. 1.0 EN
+ ver. 1.7.1 EN
 */
 
 (function() {
@@ -19,12 +19,12 @@
         lossesOfSelectedAttacksText: 'Losses from selected attacks: ',
         alternativeAttacksListHeader: ' + alternative attacks: <br/>',
         alternativeAttacksText: 'Losses from alternative attacks:<br/>',
-        noLossestext: 'No losses from selected attacks.',
+        noLossesText: 'No losses from selected attacks.',
         hiddenAttacksText: 'Hidden attacks',
         alternativeText: /[^mw]or/,
-        soldiersImgPath: 'http://settlersonlinewiki.eu/unit/',
+        soldiersImgPath: 'https://settlersonlinewiki.eu/unit/',
         soldiersImgStyles: 'width: 24px;',
-        generalsImgPath: 'http://settlersonlinewiki.eu/unit/',
+        generalsImgPath: 'https://settlersonlinewiki.eu/unit/',
         generalsImgStyles: 'width: 28px;',
         columnWithGeneralsTitle: 'garrison',
         soldiersImgConfig: [
@@ -54,11 +54,13 @@
             {'pattern':  new RegExp('Besieger', 'gi'), 'img': 'obleznik.png'},
             /* SPECIAL ATTACKS */
             {'pattern':  new RegExp('Chocolate Covered Arrows', 'gi'), 'img': 'czekoladowastrzala.png'},
+            {'pattern':  new RegExp('Cupid Arrow', 'gi'), 'img': 'kupidyna.png'},
+            {'pattern':  new RegExp('Rain Of Twig Arrows', 'gi'), 'img': 'strzalazgalezi.png'},
             {'pattern':  new RegExp('Rain Of Arrows', 'gi'), 'img': 'grad.png'},
             {'pattern':  new RegExp('Rain Of Flaming Arrows', 'gi'), 'img': 'ognistastrzala.png'},
             {'pattern':  new RegExp('Blacktree Arrow', 'gi'), 'img': 'czarnastrzala.png'},
-            {'pattern':  new RegExp('Assassine', 'gi'), 'img': 'skrytobojca.png'},
-            {'pattern':  new RegExp('Assassin', 'gi'), 'img': 'asason.png', searchPattern: new RegExp('(assassin[^e])|(assassin$)', 'gi')},
+	        {'pattern':  new RegExp('Assassin', 'gi'), 'img': 'asason.png', searchPattern: new RegExp('(assassin[^e])|(assassin$)', 'gi')},
+	        {'pattern':  new RegExp('Assassine', 'gi'), 'img': 'skrytobojca.png'},
             {'pattern':  new RegExp('Ballista', 'gi'), 'img': 'balista.png'},
             {'pattern':  new RegExp('Small Catapult', 'gi'), 'img': 'malakatapulta.png'},
             {'pattern':  new RegExp('Big Catapult', 'gi'), 'img': 'duzakatapulta.png'},
@@ -95,6 +97,11 @@
             {'pattern':  new RegExp('\\(LON\\)', 'gi'), 'img': 'nsamotnik.png', 'kind': 'general'},
             {'pattern':  new RegExp('\\(LOUD\\)', 'gi'), 'img': 'nkrzykliwa.png', 'kind': 'general'},
             {'pattern':  new RegExp('\\(NCR\\)', 'gi'), 'img': 'ndziadek.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(MIR\\)', 'gi'), 'img': 'ncudowna.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(RES\\)', 'gi'), 'img': 'nstanowczy.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(JUAN\\)', 'gi'), 'img': 'njuan.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(BROH\\)', 'gi'), 'img': 'nbrohmann.png', 'kind': 'general'},
+            {'pattern':  new RegExp('\\(NAR\\)', 'gi'), 'img': 'nnarcystyczny.png', 'kind': 'general'},
             /* ENEMY - BASIC */
             {'pattern':  new RegExp('Scavenger', 'gi'), 'img': 'lotrzyk.png'},
             {'pattern':  new RegExp('Thug', 'gi'), 'img': 'lotr.png'},
